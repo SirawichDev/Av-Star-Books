@@ -1,4 +1,3 @@
-# susu
 
 > My sensational Nuxt.js project
 

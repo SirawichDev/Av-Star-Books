@@ -1,29 +1,27 @@
 <template>
-<el-row type="flex" class="row-bg" justify="space-around">
 
 <div class="flip flip-vertical">
-    <div class="front" 
+    <div class="front"
     :style="{backgroundImage: 'url('+ thumbnail + ')'}">
-       <h1 class="text-shadow">JAPAN</h1>
+       <h1 class="text-shadow">{{title}}</h1>
     </div>
     <div class="back">
-       <h2>{{title}}</h2>
+       <h2>{{ title }}</h2>
        <p>{{ previewText }}</p>
         <div class="btn-bg bg-1">
     <div class="btn btn-1">
-     <nuxt-link to="'repo/asian' + id" ><a>
+     <nuxt-link :to="'repo/asian/' + id" ><a>
         <button>เ ส พ</button></a></nuxt-link>
     </div>
   </div>
     </div>
 </div>
 
-</el-row>
 </template>
 
 <script>
 export default {
-  name: 'Mode',
+  name: "Mode",
   props: {
     id: {
       type: String,
@@ -34,20 +32,19 @@ export default {
       require: true
     },
     previewText: {
-      type:String,
+      type: String,
       require: true
     },
     thumbnail: {
-      type:String,
+      type: String,
       require: true
     }
   }
-}
+};
 </script>
 
 
 <style scoped>
-
 body .btn-bg.bg-1 .btn-1 button {
   color: #c7f8f9;
   font-size: 2.5rem;
@@ -62,6 +59,9 @@ body .btn-bg.bg-1 .btn-1 button {
 body .btn-bg.bg-1 .btn-1 button a {
   color: #c7f8f9;
 }
+.btn .btn-1 {
+  cursor: pointer;
+}
 body .btn-bg.bg-1 .btn-1 button:hover {
   background: #c7f8f9;
   color: #6ab1c9;
@@ -69,7 +69,7 @@ body .btn-bg.bg-1 .btn-1 button:hover {
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-body .btn-bg.bg-1 .btn-1 button:hover >a {
+body .btn-bg.bg-1 .btn-1 button:hover > a {
   color: #6ab1c9;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
@@ -80,7 +80,7 @@ body .btn-bg.bg-1 .btn-1 button:active {
 }
 h1 {
   font-size: 2.2em;
-    text-align: center;
+  text-align: center;
 }
 
 .flip {
@@ -90,7 +90,7 @@ h1 {
 .flip > .back {
   display: block;
   transition-timing-function: cubic-bezier(0.175, 0.885, 1.32, 1.275);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-property: transform, opacity;
 }
 .flip > .front {
@@ -150,7 +150,15 @@ h1 {
 }
 
 .text-shadow {
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04),
+    3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04),
+    0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04),
+    7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04),
+    9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04),
+    11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04),
+    13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04),
+    0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04),
+    17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04),
+    19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
-
 </style>

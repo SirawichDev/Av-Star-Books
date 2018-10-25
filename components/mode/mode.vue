@@ -11,7 +11,8 @@
         <div class="btn-bg bg-1">
     <div class="btn btn-1">
      <nuxt-link :to="'repo/asian/' + id" ><a>
-        <button>เ ส พ</button></a></nuxt-link>
+        <button>เ ส พ</button></a>
+    </nuxt-link>
     </div>
   </div>
     </div>

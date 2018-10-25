@@ -1,8 +1,22 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+  <el-container>
+    <el-header>
+      <Nav/>
+    </el-header>
+    <el-main>
+      <nuxt/>
+    </el-main>
+  </el-container>
 </template>
+<script>
+import Nav from '~/components/navigation/content.vue';
+
+export default {
+  components: {
+    Nav
+  }
+}
+</script>
 
 <style>
 html

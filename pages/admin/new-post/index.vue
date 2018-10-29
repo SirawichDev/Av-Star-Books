@@ -40,10 +40,10 @@ export default {
     },
     methods:{
         onSave(){
-
+            console.log(this.editedPost);
         },
         onCancel(){
-            
+            this.$router.push('/admin');
         }
     }
 }

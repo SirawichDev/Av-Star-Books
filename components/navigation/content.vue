@@ -1,22 +1,38 @@
 <template>
  <el-menu class="el-menu-demo" mode="horizontal">
-  <el-menu-item index="1">Home</el-menu-item>
+  <el-menu-item class="index" index="1">Home</el-menu-item>
   <el-submenu index="2">
-    <template slot="title">Repo</template>
+    <template class="index" slot="title">Repo</template>
     <el-menu-item index="2-1">Japan</el-menu-item>
     <el-menu-item index="2-2">Korea</el-menu-item>
     <el-menu-item index="2-3">Russia</el-menu-item>
   </el-submenu>
-  <el-menu-item index="3" disabled>Info</el-menu-item>
-  <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Logout</a></el-menu-item>
+  <el-menu-item index="3" disabled>Watch movie</el-menu-item>
+  <el-menu-item index="4">
+    <a >Login</a>
+  </el-menu-item>
 </el-menu>
 </template>
 
 <script>
-export default {};
+export default {
+  data: function() {
+return {
+    logged: true,
+    notlogged: false
+  };
+},
+};
 </script>
 
- <style >
+ <style scoped>
+ .index a.nuxt-link-active {
+   color: green;
+
+ }
+ .el-menu-demo{
+   background-color: snow;
+ }
 .el-row {
     margin-bottom: 20px;
   }

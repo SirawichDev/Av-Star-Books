@@ -2,19 +2,19 @@
 <div>
 <el-form-item >
     <span slot="label">{{labels}}</span>
-    <el-input v-if="controltype === 'input'" 
+    <input v-if="controltype === 'input'" 
         v-bind="$attrs" 
         :value="value" 
-        @input="$emit('input', $event.target.value)"> 
-    </el-input>
+        @input="$emit('input', $event.target.value)"/> 
 </el-form-item>
 <el-form-item>
-    <el-input 
+    <input 
+
         v-if="controltype=== 'textarea'"
-        placeholder="ss"
+        placeholder="สัดส่วน บราๆ"
+           v-bind="$attrs" 
         :value="value" 
-        @input="$emit('input', $event.target.value)">
-    </el-input>
+        @input="$emit('input', $event.target.value)"/>
 </el-form-item>
 
 </div>

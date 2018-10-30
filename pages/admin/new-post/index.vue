@@ -1,6 +1,6 @@
 <template >
 
-   <el-form @submit.prevent="onSave">
+   <el-form @submit.prevent.native ="onSave">
 
        <input-u-i control-type="input" v-model="editedPost.star_name" labels="star name "/>
        <input-u-i control-type="input" v-model="editedPost.title" labels="Title"/>
@@ -12,7 +12,7 @@
     :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
   </el-rate>
   </el-row>
-        <button-u-i type="submit">Save</button-u-i>
+        <button-u-i type="submit" >Save</button-u-i>
         <el-button type="danger" plain @click="onCancel">Cancel</el-button>
         
 </el-form>
@@ -41,6 +41,7 @@ export default {
     methods:{
         onSave(){
             console.log(this.editedPost);
+             console.log('xx');
         },
         onCancel(){
             this.$router.push('/admin');

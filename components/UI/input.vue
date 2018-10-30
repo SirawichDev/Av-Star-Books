@@ -9,7 +9,6 @@
 </el-form-item>
 <el-form-item>
     <input 
-
         v-if="controltype=== 'textarea'"
         placeholder="สัดส่วน บราๆ"
            v-bind="$attrs" 
@@ -22,7 +21,7 @@
 
 <script>
 export default {
-    name: 'input',
+    name: 'inputs',
     props:{
         controltype: {
             type: String,
